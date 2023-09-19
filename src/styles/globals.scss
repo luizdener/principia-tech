@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+:root {
+    --bg-color: #F2F2F2;
+    --title-border-color: #F2BC1B;
+    --bg-menu: #06144bf7;
+    --p-color: #F2EEAC;
+    --text-shadow: rgba(0, 0, 0, 0.856);
+    --bg-contacts: #06144bf7;
+    --card-bg: #06144bf7;
+    --title-card: #F5EB0F;
+    --p-card: #F2EEAC;
+    --card-bg-hover: #030f3b ;
+    --strong-bg: linear-gradient(to right,  #F2BC1B 1%, white 105%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+
+    #potencia-tech {
+        width: 100vw;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        .apresentacao{
+            padding-top: 9rem;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+   body{ 
+    #potencia-tech {
+
+        .menu, .sobre, .servicos{
+            max-width: 900px;
+        }
+        .menu {
+
+            button {
+                display: none;
+            }
+
+            .list{
+                display: none;
+            }
+
+            .menu-links {
+                display: flex;
+                
+            }
+
+           
+        }
+
+        .sobre {
+            h1 {
+                font-size: clamp(1.5em, 1em + 3vw, 3em);
+
+            }
+
+            p {
+                font-size: clamp(.5em, .5em + 1.5vw, 1.5em);
+            }
+        }
+
+        .servicos {
+            h1 {
+                font-size: clamp(1.5em, 1em + 3vw, 3em);
+
+            }
+
+            h2 {
+                font-size: clamp(.5em, .5em + 1.5vw, 1.5em);
+            }
+
+            p {
+                font-size: clamp(.3em, .3em + 1.5vw, 1.1em);
+            }
+        }
+    }
+}
+}
+
